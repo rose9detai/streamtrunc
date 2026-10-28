@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rose9detai-streamtrunc"
+version = "0.1.0"
+description = "抽取数值做分布分析，用中位数绝对偏差识别流式 JSON 的截断上的离群点"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "rose9detai" }]
+keywords = ["analysis", "observability", "evaluation", "rag"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://rose9detai.github.io"
+Repository = "https://github.com/rose9detai/streamtrunc"
+Issues = "https://github.com/rose9detai/streamtrunc/issues"
+
+[project.scripts]
+streamtrunc = "streamtrunc:main"
+
+[tool.setuptools]
+py-modules = ["streamtrunc"]
